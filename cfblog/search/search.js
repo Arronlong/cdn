@@ -20,7 +20,7 @@ tmpDiv.className = 'result-item';
 var xhr = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-        xml = xhr.responseXML;
+        xml = xhr.response;//xhr.responseXML || xhr.responseText
         arrItems = xml.getElementsByTagName('blog');
         itemLength = arrItems.length;
         
