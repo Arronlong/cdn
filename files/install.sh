@@ -27,7 +27,6 @@ mv wireguard-go /usr/local/sbin
 rm -f wireguard-go-linux-amd64.tar.gz
 # wgcf
 wget https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/files/wgcf_2.2.2_linux_amd64 -O /usr/local/sbin/wgcf
-cp wgcf_2.2.2_linux_amd64 /usr/local/sbin/wgcf
 chmod +x /usr/local/sbin/wgcf
 echo|wgcf register
 wgcf generate
