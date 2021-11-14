@@ -38,5 +38,5 @@ ln -s /usr/bin/resolvectl /usr/local/bin/resolvconf
 ln -sf /lib/systemd/system/systemd-resolved.service /etc/systemd/system/dbus-org.freedesktop.resolve1.service
 systemctl enable wg-quick@wgcf
 systemctl start wg-quick@wgcf
-echo -e "完成了，可以 ping 1.1.1.1 试试看了\n如果没出问题，这里应该能显示你的IP：$(wget -qO- ifconfig.me) <=如果这里是空的，大概是失败了"
+echo -e "完成了，可以 ping 1.1.1.1 试试看了\n如果没出问题，这里应该能显示你的IP, ipv4: $(wget -4qO- ip.gs), ipv6: $(wget -6qO- ip.gs) <=如果这里是空的，大概是失败了"
 
